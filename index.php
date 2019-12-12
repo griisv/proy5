@@ -53,14 +53,21 @@ wf=wo+a*t<br>
 </p>
 </section>
 <?php
-     function solucion(){
+    function solucion(){
         $wo=23.4;
         $a=6;
         $t=11;
-        $a=($wo*$t)+($a*$t^2)/2;
-        $b=$wo+($a*$t);
+        $a=$wo*$t+$a*$t*$t/2;
+
         return $a;
-        return $b;
+
+     }
+     function solucion2(){
+         $wo=23.4;
+        $a=6;
+        $t=11;
+       $b=$wo+($a*$t);
+       return $b;
      }
 ?>
 <section class="resultado">
@@ -68,9 +75,9 @@ wf=wo+a*t<br>
 <div id="resultadoA"></div>
 <?php
 
- print "<h1> resultado: b = ".solucion(). "m/s </h1>";
+ print "<h1> resultado: b = ".solucion(). " rad </h1>";
 
- print "<h1> resultado: a = ".solucion(). "m/s </h1>";
+ print "<h1> resultado: a = ".solucion2(). " rad </h1>";
 ?>
 </section>
 </section>
